@@ -1,4 +1,18 @@
 // ---- Define your dialogs  and panels here ----
+panel_permissions = define_new_effective_permissions("ep_")
+$('#sidepanel').append(panel_permissions)
+
+$('#ep_').attr('filepath', '/C')
+
+panel_users = define_new_user_select_field("us_", "select user", function(selected_user) {
+   $('#ep_').attr('username', selected_user)
+ })
+$('#sidepanel').append(panel_users)
+
+i_dialog = define_new_dialog("dl_", "Title goes here")
+
+
+//define_new_dialog(id_prefix, title='', options = {})
 
 
 
